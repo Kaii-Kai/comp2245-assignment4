@@ -5,12 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Avengers Character Search</title>
 		<link rel = "stylesheet" href="styles.css" media="screen"/>
+		<script src="app.js"></script>
 	</head>
 	<body>
 		<div class="container">
-			<h1>Superhero Search</h1>
-			<button type ="button" id="search">Search</button>
+			<h1>AVENGERS CHARACTER SEARCH</h1>
+			<div>
+				<form action= "superheroes.php">
+				<label for="superhero">"Search by Full Nmae or Alias</label><br><br>
+				<input type="text" id="superhero" name="superhero" placeholder="e.g. Captain America or Steve Rogers"/>
+				<button type ="button" id="search">Search</button>
+				</form>
+			</div>
+			<div id="result"></div>
 		</div>
-		<script src="app.js"></script>
 	</body>
-	</html>
+</html>

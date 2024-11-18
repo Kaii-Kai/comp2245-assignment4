@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: application/json');
+
 $superheroes = [
   [
       "id" => 1,
@@ -63,10 +65,37 @@ $superheroes = [
   ], 
 ];
 
+$query = isset($_GET["query"]) ? trim($_GET["query"]) : "";
+
+if ($query === "") {
+	echo json_encode(array_column($superheroes, "alias"));
+	exit;
+}
+
+$queryLower = strtolower($query);
+$result = null.
+
+
+foreach ($superheroes as $superhero) {
+	if (strtolower($superhero["alias"]) === $queryLower || strtolower($superhero["name"]) === $queryLower){
+		$result = $superhero;
+		break;
+	}
+}
+
+if (result) {
+	echo json_encode($result);
+}else {
+	echo json_encode(["error"=>"Superhero not found."]);
+}
+
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
+
+
+
+<?php /*foreach ($superheroes as $superhero): ?>
   <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+<?php endforeach; ?>*/
+
+

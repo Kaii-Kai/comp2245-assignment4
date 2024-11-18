@@ -1,13 +1,47 @@
 body {
 	font-family: Arial, "Noto Sans", sana-serif;
+	text-align: center;
+	background colour: grey;
 }
 
 .container {
 	margin-top: 50px;
 }
 
+input{
+	padding:10px;
+	font-size:15px;
+	width:300px;
+	margin-right: 10px;
+}
+
 button{
 	padding: 10px 20px;
 	font-size: 15px;
 	border-radius: 5px;
+	background-color: red;
+	color: white;
 }
+
+button:hover(
+	background-color: #f69697;
+}
+
+#result{
+	margin-top: 20px;
+	padding: 15px;
+	text-align: left;
+}
+
+h1{
+	color: white;
+	background-color: #ADD8E6;
+}
+
+.error{
+	color: red;
+	font-weight:bold;
+}
+
+
+
